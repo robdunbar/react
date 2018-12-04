@@ -1,9 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import StoreLocator from '../storeLocator';
+import {shallow} from 'enzyme';
+import StoreLocator from '../StoreLocator';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<StoreLocator />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe("StoreLocator", function(){
+
+  let mountedStoreLocator;
+  beforeEach(()=>{
+    mountedStoreLocator = shallow(<StoreLocator />);
+  });
+
+  it('renders without crashing', () => {
+    mountedStoreLocator = shallow(<StoreLocator />);
+  });
+
+  it('renders header', () => {
+    var headers = mountedStoreLocator.find('Header');
+    expect(headers.length).toBe(1);
+  });
+
+  it('renders two buttons', () => {
+    var buttons = mountedStoreLocator.find('Button');
+    expect(buttons.length).toBe(2);
+  });
+
+  it('renders map', () => {
+    var maps = mountedStoreLocator.find('Map');
+    expect(maps.length).toBe(1);
+  });
 });
