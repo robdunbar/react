@@ -3,9 +3,14 @@ import './Map.css';
 
 class Map extends Component {
   render() {
+    let imagePath = "images/None.png";
+    if (this.props.imageName){
+      imagePath = this.props.imageName;
+    }
+
     return (
     <div className="MapBox">
-      <img src="images/none.png" alt="Map displaying the location of basketball courts." />
+      <img src={imagePath} alt="Map displaying the location of basketball courts." />
     </div>
     );
   }

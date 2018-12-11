@@ -3,23 +3,25 @@ import {shallow} from 'enzyme';
 import Map from '../Map';
 
 describe("Map", function(){
-  let mountedMap;
-  beforeEach(()=>{
-    mountedMap = shallow(<Map />);
-  });
-
   it('renders without crashing', () => {
-    mountedMap = shallow(<Map />);
+    shallow(<Map />);
   });
 
-  it('renders an img', () => {
-    let images = mountedMap.find('img');
+  it('contains an img', () => {
+    let defaultMap = shallow(<Map />);
+    let images = defaultMap.find('img');
     expect(images.length).toBe(1);
   });
 
   it('displays the none image when no params are given', ()=>{
-    let imageSource = mountedMap.find('img').prop('src');
-    expect(imageSource).toBe("images/none.png");
+    let defaultMap = shallow(<Map />);
+    let imageSource = defaultMap.find('img').prop('src');
+    expect(imageSource).toBe("images/None.png");
   });
 
+  it('displays the map \'imageName\' passed to it', ()=>{
+    let mountedMap = shallow(<Map imageName='testmap' />);
+    let imageSource = mountedMap.find('img').prop('src');
+    expect(imageSource).toBe("testmap");
+  });
 });

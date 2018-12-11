@@ -10,9 +10,9 @@ describe("App", function(){
     let mountedApp = shallow(<App />);
   });
 
-  it('renders a storeLocator', () => {
+  it('renders a courtLocator', () => {
     let mountedApp = shallow(<App />);
-    const locators = mountedApp.find('StoreLocator');
+    const locators = mountedApp.find('CourtLocator');
     expect(locators.length).toBe(1);
   });
   

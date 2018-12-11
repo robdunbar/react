@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CourtLocator renders correctly 1`] = `
+<div>
+  <div
+    className="Header"
+  >
+    <img
+      alt="Logo"
+      src="images/logo.jpg"
+      width="480"
+    />
+    <h1>
+      Basketball Court Locator
+    </h1>
+    <p>
+      Powered by React v
+      16.6.3
+    </p>
+  </div>
+  <div />
+  <div
+    className="MapBox"
+  >
+    <img
+      alt="Map displaying the location of basketball courts."
+      src="images/None.png"
+    />
+  </div>
+</div>
+`;
