@@ -8,7 +8,8 @@ class StoreLocator extends Component {
     return (<div>
               <Header />
               <div >
-                <Button />
+                <Button location="CaptainSprings" image="CaptainSprings.PNG" />
+                <Button location="Bedingfield" image="BedingfieldMemrlPark.PNG" />
                 <Button />
               </div>
 

@@ -3,7 +3,8 @@ import './Button.css';
 
 class Button extends Component {
   render() {
-    return (<button className="location-button">Court</button>  );
+    const location = this.props.location?this.props.location:"All Locations";
+    return (<button className="location-button">{location}</button>  );
   }
 }
 
