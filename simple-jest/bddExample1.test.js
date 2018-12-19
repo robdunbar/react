@@ -1,51 +1,30 @@
-class ATM {
-  constructor(balance){
-    this.balance = balance;
-  }
+// var {ATM} = require('./bddExample1');
+// var {Card} = require('./bddExample1');
 
-  insertCard(card) {
-    this.card = card;
-  }
+// describe("ATM", () => {
 
-  withdraw(amount) {
-    this.balance -= amount;
-    this.card.balance -= amount;
-    this.card = undefined;
-    return amount;
-  }
-}
+//   describe("Withdrawing cash", () => {
 
-class Card {
-  constructor(balance){
-    this.balance = balance;
-    this.isValid = true;
-  }
-}
+//     describe("Account has sufficient funds", () => {
 
-describe("ATM", ()=>{
+//       it("should withdraw the cash and return the card", () => {
+//         //GIVEN
+//         let atm;
+//         let card;
+//         card = new Card(100);
+//         atm = new ATM();
+//         atm.balance = 10000;
+//         atm.insertCard(card);
 
-  describe("Withdrawing cash", ()=>{
-    
-    describe("Account has sufficient funds", ()=>{
-      
-      it ("should withdraw the cash and return the card", ()=>{
-        //GIVEN
-        let atm;
-        let card;
-        card = new Card(100);
-        atm = new ATM();
-        atm.balance = 10000;
-        atm.insertCard(card);
+//         //WHEN
+//         var cash = atm.withdraw(20);
 
-        //WHEN
-        var cash = atm.withdraw(20);
-
-        //THEN
-        expect(cash).toBe(20);
-        expect(card.balance).toBe(80);
-        expect(atm.card).toBe(undefined);
-        expect(atm.balance).toBe(9980);
-      });
-    });
-  });
-});
+//         //THEN
+//         expect(cash).toBe(20);
+//         expect(card.balance).toBe(80);
+//         expect(atm.card).toBe(undefined);
+//         expect(atm.balance).toBe(9980);
+//       });
+//     });
+//   });
+// });

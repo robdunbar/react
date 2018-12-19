@@ -1,5 +1,14 @@
 {
-    "scripts": {
-        "test": "jest"
-    }
+  "scripts": {
+    "test": "jest"
+  },
+  "name": "simple-jest",
+  "version": "1.0.0",
+  "main": "bddExample1.js",
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "jest": "^23.6.0"
+  }
 }

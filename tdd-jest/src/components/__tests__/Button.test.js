@@ -43,25 +43,6 @@ describe("when a location is passed to it", () =>{
   });
 });
 
-describe("when a location is passed to it", () =>{
-  let mountedButton;
-  let props;
-
-  beforeEach(()=>{
-    props = {
-      location: "Location1"
-    }
-
-    mountedButton = shallow(<Button {...props} />);
-  });
-
-  it("displays the location", ()=>{
-    const locationName = mountedButton.find('.location-button');
-    expect(locationName.text()).toEqual('Location1');
-  });
-});
-
-
 describe("when NO location is passed to it", () =>{
   let mountedButton;
   let props;
@@ -74,7 +55,7 @@ describe("when NO location is passed to it", () =>{
     mountedButton = shallow(<Button {...props} />);
   });
 
-  it("displays the location", ()=>{
+  it("displays all locations", ()=>{
     const locationName = mountedButton.find('.location-button');
     expect(locationName.text()).toEqual('All Locations');
   });

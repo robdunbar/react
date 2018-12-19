@@ -29,7 +29,23 @@ describe("CourtLocator", function(){
     const tree = renderer.create(<CourtLocator />).toJSON();
     expect(tree).toMatchSnapshot();
   });
+});
 
+describe('chooseMap', ()=>{
+  it('updates this.state.currentMap using the location passed to it', ()=>{
+    const mountedCourtLocator = shallow(<CourtLocator />);
+    const mockEvent = {target:{value:'testland'}};
+    mountedCourtLocator.instance().chooseMap(mockEvent);
+    expect(mountedCourtLocator.instance().state.currentMap).toBe('images/testland.png');
+  });
+});
+
+describe('api calls', ()=>{
+  let mountedCourtLocator;
+  beforeEach(()=>{
+    mountedCourtLocator = shallow(<CourtLocator />);
+  });
+  
   it('calls axios.get in #componentDidMount', ()=>{
     return mountedCourtLocator.instance().componentDidMount().then(
       ()=>{
@@ -57,14 +73,5 @@ describe("CourtLocator", function(){
         ]);
       }
     );
-  });
-});
-
-describe('chooseMap', ()=>{
-  it('updates this.state.currentMap using the location passed to it', ()=>{
-    const mountedCourtLocator = shallow(<CourtLocator />);
-    const mockEvent = {target:{value:'testland'}};
-    mountedCourtLocator.instance().chooseMap(mockEvent);
-    expect(mountedCourtLocator.instance().state.currentMap).toBe('images/testland.png');
   });
 });
