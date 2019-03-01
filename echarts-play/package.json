@@ -1,0 +1,31 @@
+{
+  "name": "echarts-play",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "echarts": "^4.1.0",
+    "echarts-for-react": "^2.0.15-beta.0",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-scripts-ts": "3.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.9.0",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.9",
+    "@types/node": "^11.9.6",
+    "@types/react": "^16.8.6",
+    "@types/react-dom": "^16.8.2",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "react-test-renderer": "^16.8.3",
+    "jest": "^24.1.0",
+    "typescript": "^3.3.3333"
+  }
+}
