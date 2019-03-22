@@ -1,16 +1,11 @@
 import * as React from 'react';
 import './App.css';
-import Hello from './components/Hello';
-import StepLineChart from './components/StepLineChart';
+
+import TraceClientContainer from './containers/TraceClientContainer';
 
 class App extends React.Component {
   public render() {
-    return (
-      <div>
-        <Hello name="Rob" level={4} />
-        <StepLineChart />
-      </div>
-    );
+    return <TraceClientContainer />;
   }
 }
 

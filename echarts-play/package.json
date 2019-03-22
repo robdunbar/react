@@ -2,30 +2,41 @@
   "name": "echarts-play",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
+    "@blueprintjs/core": "^3.14.1",
+    "@blueprintjs/icons": "^3.6.0",
+    "@blueprintjs/select": "^3.7.0",
+    "@types/echarts": "^4.1.7",
+    "@types/enzyme": "^3.9.1",
+    "@types/jest": "24.0.11",
+    "@types/node": "11.11.3",
+    "@types/react": "16.8.8",
+    "@types/react-dom": "16.8.2",
+    "axios": "^0.18.0",
     "echarts": "^4.1.0",
     "echarts-for-react": "^2.0.15-beta.0",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-scripts-ts": "3.1.0"
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-scripts": "2.1.8",
+    "react-test-renderer": "^16.8.4",
+    "typescript": "3.3.3333"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "@types/enzyme": "^3.9.0",
-    "@types/enzyme-adapter-react-16": "^1.0.5",
-    "@types/jest": "^24.0.9",
-    "@types/node": "^11.9.6",
-    "@types/react": "^16.8.6",
-    "@types/react-dom": "^16.8.2",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.10.0",
-    "react-test-renderer": "^16.8.3",
-    "jest": "^24.1.0",
-    "typescript": "^3.3.3333"
-  }
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
